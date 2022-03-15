@@ -18,7 +18,7 @@ jobs:
       - run: tree
       - run: find -maxdepth 1 ! -name static_site ! -name .git ! -name . -exec rm -rv {} \;
       - run: tree
-      - run: mv ./static_site/* ../
+      - run: mv ./static_site/* $PWD
       - run: tree
       - run: git add .
       - run: git commit -m "Server Update"
