@@ -3,6 +3,7 @@ jobs:
   Freeze-Server:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: python freeze.py
       - run: cp -rp "./static_site" ".git/static_site"
       - run: rm -r "./static_site"
