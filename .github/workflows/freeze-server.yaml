@@ -20,6 +20,7 @@ jobs:
       - run: ls
       - run: rm -r ".git/static_site"
       - run: cd "static_site"
+      - run: ls
       - run: mv * ../
       - run: cd ..
       - run: ls
