@@ -15,7 +15,7 @@ jobs:
       - run: tree
       - run: git checkout --orphan gh_pages
       - run: python freeze.py
-      - run: find -maxdepth 1 ! -name static_site ! -name .git ! -name . -exec rm -rv {} \;
+      - run: find -maxdepth 1 ! -name CNAME ! -name static_site ! -name .git ! -name . -exec rm -rv {} \;
       - run: mv ./static_site/* $PWD
       - run: tree
       - run: git add .
