@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: sudo apt get install tree
+      - run: sudo apt-get install tree
       - run: git config user.name "GitHub Actions Bot"
       - run: git config user.email "<>"
       - run: pip install -r requirements.txt
