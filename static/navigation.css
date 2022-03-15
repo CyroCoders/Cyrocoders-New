@@ -1,0 +1,25 @@
+nav#top-nav {
+    position: fixed;
+    /* background-color: #09153f20; */
+    background-color: #ffffff10;
+    backdrop-filter: blur(20px);
+    /* border-bottom: 2px solid #ffffff; */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 72px;
+    box-shadow: inset 2px 2px 4px #ffffff40,
+                inset -2px -2px 4px #00000060,
+                0px 0px 16px #1a1a1a40;
+}
+
+nav#top-nav #brand #brand-logo img {
+    width: 48px;
+    height: 48px;
+    margin: 12px;
+}
+
+nav#top-nav #brand #brand-name span {
+    font-size: 24px;
+    font-weight: 300;
+    color: #ffffff;
+}

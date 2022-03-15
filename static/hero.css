@@ -1,0 +1,45 @@
+#hero-right {
+    margin-left: 24px;
+}
+
+#hero-right img {
+    height: 60vh;
+}
+
+#hero-left {
+    margin-right: 24px;
+}
+
+#hero-left #hero-text-top {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#hero-left #hero-text-bottom {
+    font-size: 96px;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    color: #1AE57F;
+    display: inline-block;
+    padding-bottom:2px;
+    text-shadow: 0px 0px 16px #1ae57f40;
+    width: min-content;
+}
+
+#hero-left #hero-text-bottom .decor {
+    width: 0%;
+    height: 8px;
+    margin: 0 0 auto auto;
+    border-radius: 4px;
+    background-color: #1AE57F;
+    transform-origin: 100%;
+    transition:
+        width 0.3s;
+    box-shadow: 0px 0px 16px #1ae57f40;
+}
+
+#hero-left #hero-text-bottom:hover .decor {
+    margin: 0;
+    width: 100%;
+}

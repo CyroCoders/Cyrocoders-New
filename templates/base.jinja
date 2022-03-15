@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Cyrocoders</title>
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/hero.css">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="stylesheet" href="/navigation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.5-indev/css/main.css">
+</head>
+    <body>
+        {% block navigation %}
+            <nav id="top-nav">
+                <div id="brand" class="box horizontal center">
+                    <div id="brand-logo">
+                        <a href="/">
+                            <img src="/images/logo.png" alt="Cyrocoders Logo">
+                        </a>
+                    </div>
+                    <div id="brand-name">
+                        <span>
+                            CyroCoders
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        {% endblock %}
+        {% block content %}
+        
+        {% endblock %}
+    </body>
+</html>
