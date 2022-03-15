@@ -1,0 +1,17 @@
+on: [push]
+jobs:
+  Freeze-Server:
+    runs-on: ubuntu-latest
+    steps:
+      - run: python freeze.py
+      - run: cp -rp "./static_site" ".git/static_site"
+      - run: rm -r "./static_site"
+      - run: git checkout --orphan gh_pages
+      - run: cp -rp ".git/static_site" "./"
+      - run: rm -r ".git/static_site"
+      - run: git add .
+      - run: git commit -m "Server Update"
+      - run: git push origin gh_pages
+      - run: git checkout master
+      - run: git push origin master
+        uses: actions/checkout@v2
