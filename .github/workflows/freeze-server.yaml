@@ -13,6 +13,7 @@ jobs:
       - run: git checkout --orphan gh_pages
       - run: cp -rp ".git/static_site" "./"
       - run: rm -r ".git/static_site"
+      - run: ls
       - run: find ./ -mindepth 1 ! -regex '^./static_site\(/.*\)?' -delete
       - run: cp -rp "./static_site" "./"
       - run: rm -r "./static_site"
