@@ -8,17 +8,12 @@ jobs:
       - run: git config user.email "<>"
       - run: pip install -r requirements.txt
       - run: python freeze.py
-      - run: cp -rp "./static_site" ".git/static_site"
+      - run: cp -rp "./static_site/" ".git/static_site/"
       - run: rm -r "./static_site"
       - run: git checkout --orphan gh_pages
       - run: git rm -rf .
-      - run: ls
-      - run: cp -rp ".git/static_site" "./"
+      - run: cp -rp ".git/static_site/" "./"
       - run: rm -r ".git/static_site"
-      - run: ls
-      - run: find ./ -mindepth 1 ! -regex '^./static_site\(/.*\)?' -delete
-      - run: cp -rp "./static_site" "./"
-      - run: rm -r "./static_site"
       - run: git add .
       - run: git commit -m "Server Update"
       - run: git push origin gh_pages
