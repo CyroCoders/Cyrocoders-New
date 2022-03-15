@@ -4,6 +4,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git config user.name "GitHub Actions Bot"
+      - run: git config user.email "<>"
       - run: pip install -r requirements.txt
       - run: python freeze.py
       - run: cp -rp "./static_site" ".git/static_site"
