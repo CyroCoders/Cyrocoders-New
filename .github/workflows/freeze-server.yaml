@@ -18,6 +18,10 @@ jobs:
       - run: git rm -rf .
       - run: cp -rp ".git/static_site/" "./"
       - run: rm -r ".git/static_site"
+      - run: cd "static_site"
+      - run: mv * ../
+      - run: cd ..
+      - run: rm -r "static_site"
       - run: git add .
       - run: git commit -m "Server Update"
       - run: git push origin gh_pages --force
