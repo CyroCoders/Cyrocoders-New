@@ -9,11 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: mkdir deb
-      - run: cd deb
-      - run: apt download tree
-      - run: dpkg-deb -xv ./*deb
-      - run: /deb/usr/bin/tree
+      - run: sudo apt get install tree
       - run: git config user.name "GitHub Actions Bot"
       - run: git config user.email "<>"
       - run: pip install -r requirements.txt
@@ -21,9 +17,9 @@ jobs:
       - run: cp -rp "./static_site/" ".git/static_site/"
       - run: rm -r "./static_site"
       - run: git checkout --orphan gh_pages
-      - run: /deb/usr/bin/tree
+      - run: tree
       - run: git rm -rf .
-      - run: /deb/usr/bin/tree
+      - run: tree
       - run: cp -rp ".git/static_site/" "./"
       - run: ls
       - run: rm -r ".git/static_site"
