@@ -11,6 +11,7 @@ jobs:
       - run: cp -rp "./static_site" ".git/static_site"
       - run: rm -r "./static_site"
       - run: git checkout --orphan gh_pages
+      - run: git rm -rf .
       - run: ls
       - run: cp -rp ".git/static_site" "./"
       - run: rm -r ".git/static_site"
