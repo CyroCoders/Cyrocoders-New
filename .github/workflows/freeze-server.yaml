@@ -8,16 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - run: sudo apt-get install tree
       - run: git config user.name "GitHub Actions Bot"
       - run: git config user.email "<>"
       - run: pip install -r requirements.txt
+      - run: tree
       - run: git checkout --orphan gh_pages
       - run: python freeze.py
-      - run: tree
       - run: find -maxdepth 1 ! -name static_site ! -name .git ! -name . -exec rm -rv {} \;
-      - run: tree
       - run: mv ./static_site/* $PWD
       - run: tree
       - run: git add .
