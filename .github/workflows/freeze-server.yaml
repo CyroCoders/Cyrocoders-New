@@ -14,4 +14,3 @@ jobs:
       - run: git push origin gh_pages
       - run: git checkout master
       - run: git push origin master
-        uses: actions/checkout@v2
