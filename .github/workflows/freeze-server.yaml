@@ -21,7 +21,7 @@ jobs:
       - run: cd "static_site"
       - run: mv * ../
       - run: cd ..
-      - run: rm -r "static_site"
+      - run: ls
       - run: git add .
       - run: git commit -m "Server Update"
       - run: git push origin gh_pages --force
