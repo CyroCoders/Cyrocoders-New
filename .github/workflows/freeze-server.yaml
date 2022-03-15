@@ -13,10 +13,8 @@ jobs:
       - run: git config user.name "GitHub Actions Bot"
       - run: git config user.email "<>"
       - run: pip install -r requirements.txt
-      - run: python freeze.py
-      - run: cp -rp "./static_site/" ".git/static_site/"
-      - run: rm -r "./static_site"
       - run: git checkout --orphan gh_pages
+      - run: python freeze.py
       - run: tree
       - run: find -maxdepth 1 ! -name static_site ! -name . -exec rm -rv {} \;
       - run: tree
