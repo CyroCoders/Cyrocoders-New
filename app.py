@@ -1,4 +1,3 @@
-from re import template
 import CyroWebB, jwt
 
 server = CyroWebB.Server(__name__)
