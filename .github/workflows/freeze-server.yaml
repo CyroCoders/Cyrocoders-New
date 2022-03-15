@@ -12,7 +12,7 @@ jobs:
       - run: mkdir deb
       - run: cd deb
       - run: apt download tree
-      - run: dpkg-deb -xv ./*deb ./
+      - run: dpkg-deb -xv ./*deb
       - run: /deb/usr/bin/tree
       - run: git config user.name "GitHub Actions Bot"
       - run: git config user.email "<>"
