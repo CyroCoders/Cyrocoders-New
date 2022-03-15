@@ -13,6 +13,9 @@ jobs:
       - run: git checkout --orphan gh_pages
       - run: cp -rp ".git/static_site" "./"
       - run: rm -r ".git/static_site"
+      - run: find ./ -mindepth 1 ! -regex '^./static_site\(/.*\)?' -delete
+      - run: cp -rp "./static_site" "./"
+      - run: rm -r "./static_site"
       - run: git add .
       - run: git commit -m "Server Update"
       - run: git push origin gh_pages
