@@ -20,6 +20,7 @@ jobs:
       - run: tree
       - run: git add .
       - run: git commit -m "Server Update"
-      - run: git push origin gh_pages --force
+      - run: git push origin gh_pages
       - run: git checkout master
       - run: git push origin master
+      - run: echo "Server Updated"
