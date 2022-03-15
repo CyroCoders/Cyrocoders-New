@@ -18,7 +18,7 @@ jobs:
       - run: rm -r "./static_site"
       - run: git checkout --orphan gh_pages
       - run: tree
-      - run: git rm -rf .
+      - run: find -maxdepth 1 ! -name static_site ! -name . -exec rm -rv {} \;
       - run: tree
       - run: cp -rp ".git/static_site/" "./"
       - run: ls
