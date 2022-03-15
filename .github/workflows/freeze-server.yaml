@@ -18,10 +18,8 @@ jobs:
       - run: tree
       - run: find -maxdepth 1 ! -name static_site ! -name .git ! -name . -exec rm -rv {} \;
       - run: tree
-      - run: cd "static_site"
-      - run: mv * ../
-      - run: cd ..
-      - run: ls
+      - run: mv -r static_site ./
+      - run: tree
       - run: git add .
       - run: git commit -m "Server Update"
       - run: git push origin gh_pages --force
