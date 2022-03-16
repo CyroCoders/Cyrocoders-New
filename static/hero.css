@@ -25,6 +25,7 @@
     padding-bottom:2px;
     text-shadow: 0px 0px 16px #1ae57f40;
     width: min-content;
+    margin-bottom: 36px;
 }
 
 #hero-left #hero-text-bottom .decor {
@@ -42,4 +43,41 @@
 #hero-left #hero-text-bottom:hover .decor {
     margin: 0;
     width: 100%;
+}
+
+#hero-left #hero-CTA a.button {
+    transition: .3s;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 12px 24px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(20px);
+    border: #ffffff40 1px solid;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+#hero-left #hero-CTA a.button:hover {
+    transition: .3s;
+    box-shadow: inset 8px 8px 8px #ffffff40,
+                inset -8px -8px 8px #00000060,
+                0px 0px 16px #1a1a1a40;
+}
+
+#hero-left #hero-CTA a.button:hover:active {
+    transition: .1s;
+    box-shadow: inset -4px -4px 8px #00000060,
+                inset 4px 4px 8px #ffffff40;
+}
+
+#hero-left #hero-CTA a.button:nth-of-type(1) {
+    color: #1AE57F;
+    border: 2px solid #1AE57F;
+    margin-right: 12px;
+}
+
+#hero-left #hero-CTA a.button:nth-of-type(2) {
+    color: #19e6e6;
+    border: 2px solid #19e6e6;
+    margin-left: 12px;
 }
