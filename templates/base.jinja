@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/hero.css">
     <link rel="stylesheet" href="/fonts.css">
     <link rel="stylesheet" href="/navigation.css">
+    <link rel="stylesheet" href="/popups.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.5-indev/css/main.css">
 
     <meta name="title" content="CyroCoders Community For Developers">
@@ -50,12 +51,22 @@
         <div id="popups">
             <section id="signup">
                 <span>Sign Up For A Free Dev Account</span>
-                <form action="/signup" method="post">
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <input type="password" name="password2" placeholder="Confirm Password" required>
+                <form id="signup-form">
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <input type="password" id="signup-password2" placeholder="Confirm Password" required>
                     <input type="submit" value="Sign Up">
+                </form>
+            </section>
+            <section id="login">
+                <span>Log In To Your Dev Account</span>
+                <form id="login-form">
+                    <input type="text" id="login-username" placeholder="Username" required>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <input type="password" id="login-password2" placeholder="Confirm Password" required>
+                    <input type="submit" value="Login">
                 </form>
             </section>
         </div>
