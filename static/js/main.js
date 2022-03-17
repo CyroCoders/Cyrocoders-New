@@ -49,6 +49,7 @@ document.querySelector("#signup-form").addEventListener("submit", (e) => {
         createUser(email, password)
         .then((userCredential) => {
             user = userCredential.user;
+            document.querySelector("#signup").classList.remove("active");
         })
             .catch((error) => {
             errorCode = error.code;
@@ -61,5 +62,14 @@ document.querySelector("#login-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const email = document.querySelector("#login-email").value;
     const password = document.querySelector("#logim-password").value;
-    authenticateUser(email, password);
+    authenticateUser(email, password)
+    .then((userCredential) => {
+        user = userCredential.user;
+        document.querySelector("#login").classList.remove("active");
+    })
+        .catch((error) => {
+        errorCode = error.code;
+        errorMessage = error.message;
+        console.log(errorMessage)
+    });
 });
