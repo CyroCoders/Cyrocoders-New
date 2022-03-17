@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/fonts.css">
     <link rel="stylesheet" href="/navigation.css">
     <link rel="stylesheet" href="/popups.css">
+    <link rel="stylesheet" href="/auth.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.5-indev/css/main.css">
 
     <meta name="title" content="CyroCoders Community For Developers">
@@ -37,11 +38,9 @@
                     </div>
                 </div>
                 <div id="account">
-                    <a href="/profile">
-                        <span class="box center">
-                            <ion-icon name="person-outline"></ion-icon>
-                        </span>
-                    </a>
+                    <span class="box center">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
                 </div>
             </nav>
         {% endblock %}
@@ -49,26 +48,29 @@
         
         {% endblock %}
         <div id="popups">
-            <section id="signup">
-                <span>Sign Up For A Free Dev Account</span>
-                <form id="signup-form">
+            <section id="signup" class="box vertical center">
+                <form id="signup-form" class="box vertical">
+                    <span>Sign Up For A Free Dev Account</span>
                     <input type="text" id="signup-username" placeholder="Username" required>
                     <input type="email" id="signup-email" placeholder="Email" required>
                     <input type="password" id="signup-password" placeholder="Password" required>
                     <input type="password" id="signup-password2" placeholder="Confirm Password" required>
                     <input type="submit" value="Sign Up">
+                    <span class="to-login">Log In</span>
                 </form>
             </section>
-            <section id="login">
-                <span>Log In To Your Dev Account</span>
-                <form id="login-form">
+            <section id="login" class="box vertical center">
+                <form id="login-form" class="box vertical">
+                    <span>Log In To Your Dev Account</span>
                     <input type="text" id="login-username" placeholder="Username" required>
                     <input type="email" id="login-email" placeholder="Email" required>
                     <input type="password" id="login-password" placeholder="Password" required>
                     <input type="submit" value="Login">
+                    <span class="to-signup">Sign Up</span>
                 </form>
             </section>
         </div>
+        <script src="/js/main.js" type="module"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
