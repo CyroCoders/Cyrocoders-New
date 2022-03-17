@@ -1,25 +1,26 @@
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "/js/firebase-config.js";
+
+const auth = getAuth();
+
 function createUser(email, password) {
-    app.auth().createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-        var user = userCredential.user;
-    })
-    .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-    });
+    return createUserWithEmailAndPassword(auth, email, password)
 }
 
 function authenticateUser(email, password) {
-    firebase.auth().signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        var user = userCredential.user;
+      const user = userCredential.user;
+      return [true, user];
     })
     .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      return [errorMessage, errorCode];
     });
 }
 
-function signOut() {
-    firebase.auth().signOut();
+function signOutUser() {
+    signOut(auth);
 }
+
+export { createUser, authenticateUser, signOutUser };
