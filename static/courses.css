@@ -5,6 +5,12 @@
     width: 408px;
 }
 
+.course p {
+    font-size: 0.9em;
+    overflow-wrap: break-word;
+    margin: 0;
+}
+
 .course ul {
     list-style: none;
     display: inline-flex;
