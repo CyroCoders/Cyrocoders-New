@@ -80,6 +80,7 @@ document.querySelector("#login-form").addEventListener("submit", (e) => {
 
 premiumCourses.forEach((course) => {
     var courseElement = document.createElement("div");
+    courseElement.id = course.id;
     courseElement.classList.add("course");
     courseElement.classList.add("box");
     courseElement.classList.add("vertical");
@@ -99,11 +100,16 @@ premiumCourses.forEach((course) => {
         tagsElement.appendChild(tagElement);
     });
     courseElement.appendChild(tagsElement);
+    courseElement.addEventListener("click", function(event) {
+        console.log(event)
+        document.location.href = "/course?id=" + event.target.id;
+    });
     document.querySelector("#premiumCoursesContent").appendChild(courseElement);
 });
 
 freeLessons.forEach((lesson) => {
     var lessonElement = document.createElement("div");
+    lessonElement.id = lesson.id;
     courseElement.classList.add("lesson");
     courseElement.classList.add("box");
     courseElement.classList.add("vertical");
@@ -123,5 +129,9 @@ freeLessons.forEach((lesson) => {
         tagsElement.appendChild(tagElement);
     });
     lessonElement.appendChild(tagsElement);
+    lessonElement.addEventListener("click", function(event) {
+        console.log(event)
+        document.location.href = "/lesson?id=" + event.target.id;
+    });
     document.querySelector("#freeLessonsContent").appendChild(lessonElement);
 });

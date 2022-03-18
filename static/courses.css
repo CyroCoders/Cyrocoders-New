@@ -5,6 +5,10 @@
     width: 408px;
 }
 
+.course * {
+    pointer-events: none;
+}
+
 .course p {
     font-size: 0.9em;
     overflow-wrap: break-word;
@@ -21,4 +25,5 @@
 .course ul li{
     margin: 0 16px 0 0;
     color: rgb(255, 72, 0);
+    pointer-events: auto;
 }
