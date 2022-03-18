@@ -38,12 +38,12 @@ div.card {
     box-shadow: 0px 0px 10px var(--card-color-shadow);
 }
 
-.grid-3 {
+.grid-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 432px 432px;
     grid-gap: 16px;
     justify-items: center;
-    align-items: center;
+    justify-content: center;
 }
 
 ::-webkit-scrollbar {
