@@ -10,3 +10,7 @@ def index(request: CyroWebB.Request.request, response: CyroWebB.Response.respons
 @server.create_endpoint("/profile")
 def index(request: CyroWebB.Request.request, response: CyroWebB.Response.response):
     response.text = template("profile.jinja")
+
+@server.create_endpoint("/course")
+def index(request: CyroWebB.Request.request, response: CyroWebB.Response.response):
+    response.text = template("course.jinja")
