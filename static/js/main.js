@@ -77,3 +77,51 @@ document.querySelector("#login-form").addEventListener("submit", (e) => {
         document.querySelector("#login-form span.error").style.display = "block";
     });
 });
+
+premiumCourses.forEach((course) => {
+    var courseElement = document.createElement("div");
+    courseElement.classList.add("course");
+    courseElement.classList.add("box");
+    courseElement.classList.add("vertical");
+    courseElement.innerHTML = `
+        <div class="image">
+            <img src="${course.thumbnail}" alt="${course.name}">
+        </div>
+        <div class="info">
+            <h3>${course.name}</h3>
+            <p>${course.description}</p>
+        </div>
+    `;
+    var tagsElement = document.createElement("ul");
+    course.tags.forEach((tag) => {
+        var tagElement = document.createElement("li");
+        tagElement.innerHTML = tag;
+        tagsElement.appendChild(tagElement);
+    });
+    courseElement.appendChild(tagsElement);
+    document.querySelector("#premiumCoursesContent").appendChild(courseElement);
+});
+
+freeLessons.forEach((lesson) => {
+    var lessonElement = document.createElement("div");
+    courseElement.classList.add("lesson");
+    courseElement.classList.add("box");
+    courseElement.classList.add("vertical");
+    lessonElement.innerHTML = `
+        <div class="image">
+            <img src="${lesson.thumbnail}" alt="${lesson.name}">
+        </div>
+        <div class="info">
+            <h3>${lesson.name}</h3>
+            <p>${lesson.description}</p>
+        </div>
+    `;
+    var tagsElement = document.createElement("ul");
+    lesson.tags.forEach((tag) => {
+        var tagElement = document.createElement("li");
+        tagElement.innerHTML = tag;
+        tagsElement.appendChild(tagElement);
+    });
+    lessonElement.appendChild(tagsElement);
+    document.querySelector("#freeLessonsContent").appendChild(lessonElement);
+});

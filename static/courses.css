@@ -1,0 +1,18 @@
+.course {
+    padding: 24px;
+    background: var(--card-color-background);
+    border-radius: var(--card-border-radius);
+    width: 408px;
+}
+
+.course ul {
+    list-style: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.course ul li{
+    margin: 0 16px 0 0;
+    color: rgb(255, 72, 0);
+}
