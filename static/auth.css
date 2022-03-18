@@ -24,6 +24,16 @@
     font-weight: 500;
 }
 
+#login-form span.error, #signup-form span.error {
+    padding: 8px;
+    border-radius: 8px;
+    background: #ffa4a4;
+    color: #ff2020;
+    font-size: 0.8em;
+    border: 1px solid #ff2020;
+    display: none;
+}
+
 #login-form input, #signup-form input {
     margin: 12px 24px;
     padding: 12px;
