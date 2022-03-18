@@ -20,7 +20,7 @@ document.querySelector("#signup-form").addEventListener("click", function(e) {
     e.stopPropagation();
 });
 
-document.querySelector("#login-form").addEventListener("submit", function(e) {
+document.querySelector("#login-form").addEventListener("click", function(e) {
     e.stopPropagation();
 });
 
