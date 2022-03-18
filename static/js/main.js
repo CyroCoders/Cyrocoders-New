@@ -79,7 +79,7 @@ document.querySelector("#login-form").addEventListener("submit", (e) => {
 });
 
 premiumCourses.forEach((course) => {
-    document.querySelector("#premiumCoursesContent .empty").style.display = "none";
+    document.querySelector("#premiumCourses .empty").style.display = "none";
     var courseElement = document.createElement("div");
     courseElement.id = course.id;
     courseElement.classList.add("course");
@@ -109,7 +109,7 @@ premiumCourses.forEach((course) => {
 });
 
 freeLessons.forEach((lesson) => {
-    document.querySelector("#freeLessonsContent .empty").style.display = "none";
+    document.querySelector("#freeLessons .empty").style.display = "none";
     var lessonElement = document.createElement("div");
     lessonElement.id = lesson.id;
     courseElement.classList.add("lesson");

@@ -5,6 +5,12 @@
     width: 408px;
 }
 
+.empty {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
 .course * {
     pointer-events: none;
 }
