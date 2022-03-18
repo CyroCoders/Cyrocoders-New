@@ -24,7 +24,6 @@ premiumCourses.forEach((course) => {
     });
     courseElement.appendChild(tagsElement);
     courseElement.addEventListener("click", function(event) {
-        console.log(event)
         document.location.href = "/course?id=" + event.target.id;
     });
     document.querySelector("#premiumCoursesContent").appendChild(courseElement);
@@ -54,7 +53,6 @@ freeLessons.forEach((lesson) => {
     });
     lessonElement.appendChild(tagsElement);
     lessonElement.addEventListener("click", function(event) {
-        console.log(event)
         document.location.href = "/lesson?id=" + event.target.id;
     });
     document.querySelector("#freeLessonsContent").appendChild(lessonElement);
