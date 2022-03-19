@@ -69,22 +69,19 @@ document.querySelector("#content").querySelectorAll("h2,h3").forEach(function(ta
         toc.lastChild.appendChild(href_elem);
     }
 });
-var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        console.log(entry.target.innerHTML.replace(/ /g, "_"))
-        if (entry.intersectionRatio > 0) {
-            entry.target.classList.add("active");
-            document.querySelector("#tableOfContent").querySelectorAll("a li.active").forEach(function(elem){
-                elem.classList.remove("active");
-            });
-            document.querySelector("#tableOfContent").querySelector("a[href='#" + entry.target.innerHTML.replace(/ /g, "_") + "'] li").classList.add("active");
-        } else {
-            document.querySelector("#tableOfContent").querySelector("a[href='#" + entry.target.innerHTML.replace(/ /g, "_") + "'] li").classList.remove("active");
+
+document.body.addEventListener("scroll", function(){
+    var target;
+    document.querySelector("#content").querySelectorAll("h2,h3").forEach(function(item){
+        if (item.getBoundingClientRect().bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+            target = item;
         }
     });
-});
-document.querySelector("#content").querySelectorAll("h2,h3").forEach(function(item){
-    observer.observe(item);
+    target.classList.add("active");
+    document.querySelector("#tableOfContent").querySelectorAll("a li.active").forEach(function(elem){
+        elem.classList.remove("active");
+    });
+    document.querySelector("#tableOfContent").querySelector("a[href='#" + target.innerHTML.replace(/ /g, "_") + "'] li").classList.add("active");
 });
 
 hljs.highlightAll();
