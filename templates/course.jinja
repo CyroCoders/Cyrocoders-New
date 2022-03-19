@@ -1,0 +1,26 @@
+{% extends "base.jinja" %}
+{% block title %}
+    Home
+{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="/course.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/obsidian.min.css">
+{% endblock %}
+{% block content %}
+    <div id="linear-layout">
+        <div id="sidebar">
+        </div>
+        <div id="main-content">
+            <div id="youtube">
+            </div>
+            <div id="content"></div>
+        </div>
+        <div id="tableOfContent">
+                <h3>Table of Contents</h3>
+                <ul>
+                </ul>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/highlight.min.js"></script>
+    <script src="/js/course.js" type="module"></script>
+{% endblock %}
