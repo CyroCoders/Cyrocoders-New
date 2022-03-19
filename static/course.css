@@ -39,7 +39,13 @@ iframe {
 
 #youtube {
     aspect-ratio: 16/9;
-    width: 80%;
+    width: 100%;
+    margin-top: 24px;
+}
+
+#main-content h2, h3 {
+    margin-top: 24px;
+    text-align: start;
 }
 
 #tableOfContent {
