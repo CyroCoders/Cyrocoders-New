@@ -26,36 +26,39 @@ nav#top-nav #brand #brand-name span {
     color: #ffffff;
 }
 
-nav .button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+nav#top-nav #account {
     font-size: 24px;
     padding: 10px;
     width: 48px;
     height: 48px;
     margin: 12px;
+}
+
+nav .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 12px;
     border: #ffffff40 1px solid;
     box-shadow: none;
     transition: .2s;
 }
 
-nav#top-nav #account:hover {
+nav .button:hover {
     transition: .2s;
     box-shadow: inset 2px 2px 4px #ffffff40,
                 inset -2px -2px 4px #00000060,
                 0px 0px 16px #1a1a1a40;
 }
 
-nav#top-nav #account:hover:active {
+nav .button:hover:active {
     transition: .1s;
     box-shadow: inset -2px -2px 4px #00000060,
                 inset 2px 2px 4px #ffffff40;
 }
 
-nav#top-nav #account a {
+nav .button a {
     text-decoration: none;
     color: var(--color-text);
 }
