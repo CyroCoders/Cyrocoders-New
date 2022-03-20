@@ -100,9 +100,19 @@ iframe {
     padding-left: 24px;
 }
 
+#tableOfContent ul a li.h2 {
+    border-left: 0;
+    transition: .3s;
+}
+
 #tableOfContent ul a li.h2.active {
     border-left: 4px solid var(--color-text-highlight);
     padding: 4px 8px;
+    transition: .3s;
+}
+
+#tableOfContent ul a li.h3 {
+    border-left: 0;
     transition: .3s;
 }
 
