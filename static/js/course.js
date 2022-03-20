@@ -17,6 +17,23 @@ await getDoc(course).then((querySnapshot) => {
     courseData = querySnapshot.data();
 });
 
+courseData.sections.forEach((section,index) => {
+    var sec = document.createElement("div");
+    sec.classList.add("section-label");
+    sec.classList.add("button");
+    sec.id = index;
+    sec.innerHTML = section.name;
+    document.querySelector("#sidebar").appendChild(sec);
+
+    sec.addEventListener("click", (event) => {
+        window.location.href = `/course?id=${id}&section=${event.target.id}`;
+    });
+
+    if(section_index == index){
+        sec.classList.add("active");
+    }
+});
+
 var section = courseData.sections[section_index];
 document.querySelector("#youtube").innerHTML =  '<iframe src="https://www.youtube-nocookie.com/embed/' + section.youtube + '?autoplay=1&theme=dark&autohide=2&cc_load_policy=1&modestbranding=1&rel=0"frameborder="0"></iframe>'
 

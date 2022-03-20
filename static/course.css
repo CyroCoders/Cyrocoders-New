@@ -11,6 +11,22 @@
                 0px 0px 16px #1a1a1a40;
 }
 
+#sidebar .section-label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    width: 200px;
+    height: 40px;
+    padding: 0px 12px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ffffff12;
+}
+
+#sidebar .section-label.active {
+    background-color: #ffffff12;
+}
+
 #top-nav {
     border-bottom-left-radius: 0 !important;
 }
