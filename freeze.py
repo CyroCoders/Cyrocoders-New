@@ -21,18 +21,18 @@ for endpoint in server.endpoints.keys():
         else:
             file_name = endpoint.split("/")[-1]
             folder = os.path.splitext(endpoint)[0]
-    endpoint = "."*3 + endpoint
-    folder = "."*3 + folder
-    if endpoint[-1] == "/":
+    endpoint = "."*3 + endpoint + "."*3
+    folder = "."*3 + folder + "."*3
+    if endpoint[-3] == "/":
         endpoint = endpoint[:-1]
-    if endpoint[2] == "/":
+    if endpoint[3] == "/":
         endpoint = endpoint[1:]
-    if folder[-1] == "/":
+    if folder[-3] == "/":
         folder = folder[:-1]
-    if folder[2] == "/":
+    if folder[3] == "/":
         folder = folder[1:]
-    endpoint = endpoint[3:]
-    folder = folder[3:]
+    endpoint = endpoint[3:-3]
+    folder = folder[3:-3]
     tasks.append((endpoint, file_name, folder))
 
 for endpoint, file_name, folder in tasks:
