@@ -23,7 +23,6 @@ document.querySelector("#youtube").innerHTML =  '<iframe src="https://www.youtub
 section.content.forEach(function(content){
     var sec = document.createElement("section");
     sec.classList.add("section");
-    console.log(content);
     if (content.type == "text") {
         sec.innerHTML = content.value;
         sec.classList.add("text");
