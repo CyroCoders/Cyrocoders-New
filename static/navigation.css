@@ -26,7 +26,7 @@ nav#top-nav #brand #brand-name span {
     color: #ffffff;
 }
 
-nav#top-nav #account {
+nav .button {
     display: flex;
     flex-direction: column;
     align-items: center;
