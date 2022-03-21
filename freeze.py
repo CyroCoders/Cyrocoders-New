@@ -15,11 +15,10 @@ for endpoint in server.endpoints.keys():
         file_name = endpoint.split("/")[-1] if endpoint[-1] != "/" else endpoint[:-1].split("/")[-1]
         folder = os.path.splitext(endpoint[:-1])[0]
     else:
+        file_name = "index.html"
         if endpoint[-1] == "/":
-            file_name = "index.html"
             folder = os.path.splitext(endpoint[:-1])[0]
         else:
-            file_name = endpoint.split("/")[-1]
             folder = os.path.splitext(endpoint)[0]
     endpoint = "."*3 + endpoint + "."*3
     folder = "."*3 + folder + "."*3
