@@ -62,7 +62,7 @@ document.querySelector("#signup-form").addEventListener("submit", (e) => {
 document.querySelector("#login-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const email = document.querySelector("#login-email").value;
-    const password = document.querySelector("#logim-password").value;
+    const password = document.querySelector("#login-password").value;
     authenticateUser(email, password)
     .then((userCredential) => {
         user = userCredential.user;
