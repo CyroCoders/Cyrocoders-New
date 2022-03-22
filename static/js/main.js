@@ -3,7 +3,7 @@ import { createUser, authenticateUser, signOutUser } from "/js/authentication.js
 var user, errorCode, errorMessage;
 
 document.querySelector("#account").addEventListener("click", function() {
-    if (user == null || user == undefined || user == "") {
+    if (user == null) {
         document.querySelector("#signup").classList.add("active");
     } else {
         document.location.href = "/profile";
