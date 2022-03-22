@@ -14,4 +14,14 @@ function signOutUser() {
     signOut(auth);
 }
 
-export { createUser, authenticateUser, signOutUser };
+var user
+
+auth.onAuthStateChanged(function(_user) {
+    if (_user) {
+        user = _user;
+    } else {
+        user = null;
+    }
+});
+
+export { createUser, authenticateUser, signOutUser, user };
