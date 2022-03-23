@@ -48,12 +48,12 @@ document.querySelector("#signup-form").addEventListener("submit", (e) => {
     if (password === password2) {
         createUser(email, password)
         .then((userCredential) => {
-            user = userCredential.user;
             document.querySelector("#signup").classList.remove("active");
         })
             .catch((error) => {
             errorCode = error.code;
             errorMessage = error.message;
+            console.log(errorMessage);
             document.querySelector("#signup-form span.error").innerHTML = errorMessage[22].toUpperCase() + errorMessage.slice(22,-2).replaceAll("-"," ").slice(1) + ".";
             document.querySelector("#signup-form span.error").style.display = "block";
         });
@@ -65,7 +65,6 @@ document.querySelector("#login-form").addEventListener("submit", (e) => {
     const password = document.querySelector("#login-password").value;
     authenticateUser(email, password)
     .then((userCredential) => {
-        user = userCredential.user;
         document.querySelector("#login").classList.remove("active");
     })
         .catch((error) => {
