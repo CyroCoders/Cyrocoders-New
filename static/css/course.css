@@ -9,6 +9,7 @@
     box-shadow: inset 2px 2px 4px #ffffff40,
                 inset -2px -2px 4px #00000060,
                 0px 0px 16px #1a1a1a40;
+    justify-content: flex-start;
 }
 
 #sidebar .section-label {
