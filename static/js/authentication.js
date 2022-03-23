@@ -13,13 +13,6 @@ function authenticateUser(email, password) {
 function signOutUser() {
     signOut(auth);
 }
-firebase.auth().onAuthStateChanged(function(_user) {
-    if (_user) {
-        var user = _user;
-    } else {
-        var user = null;
-    }
-});
 
 var user
 
