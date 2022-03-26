@@ -53,7 +53,6 @@ document.querySelector("#signup-form").addEventListener("submit", (e) => {
             .catch((error) => {
             errorCode = error.code;
             errorMessage = error.message;
-            console.log(errorMessage);
             document.querySelector("#signup-form span.error").innerHTML = errorMessage[22].toUpperCase() + errorMessage.slice(22,-2).replaceAll("-"," ").slice(1) + ".";
             document.querySelector("#signup-form span.error").style.display = "block";
         });
