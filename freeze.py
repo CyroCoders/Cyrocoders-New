@@ -1,5 +1,5 @@
 from app import server
-import CyroWebB
+import Retica
 import os
 
 if not(os.path.isdir("static_site")):
@@ -40,9 +40,10 @@ for endpoint, file_name, folder in tasks:
             os.mkdir("static_site/" + "/".join(folder.split("/")[:folder_+1]))
     with open("static_site/" + (f"{folder}/{file_name}" if folder not in [''] else f"/{file_name}"), "w") as f:
         print(f"Generating static page \"{file_name}\" at '{folder}' for endpoint: {endpoint}")
-        response = CyroWebB.Response.response()
-        request = CyroWebB.Request.request(f'GET { "/" + f"{folder}/{file_name}" if folder not in [""] else f"/{file_name}" } HTTP/1.1\nUser-Agent: CyroWeb-Freezer\nAccept-Encoding: gzip, deflate\nConnection: Keep-Alive'.encode())
-        server.endpoints['/' + endpoint](request, response)
+        response = Retica.Response.response()
+        request = Retica.Request.request()
+        request.parse(f'GET { "/" + f"{folder}/{file_name}" if folder not in [""] else f"/{file_name}" } HTTP/1.1\r\nUser-Agent: CyroWeb-Freezer\r\nAccept-Encoding: gzip, deflate\r\nConnection: Keep-Alive'.encode())
+        server.endpoints['/' + endpoint][0](request, response)
         f.write(response.text)
         print(f.name)
 

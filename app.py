@@ -1,16 +1,17 @@
-import CyroWebB, jwt
+import Retica, jwt
+import Retica.Render
 
-server = CyroWebB.Server(__name__)
-template = CyroWebB.Template(server)
+server = Retica.Server(__name__)
+templator = Retica.Render.TemplateRender(server)
 
 @server.create_endpoint("/")
-def index(request: CyroWebB.Request.request, response: CyroWebB.Response.response):
-    response.text = template("index.jinja")
+def index(request: Retica.Request.request, response: Retica.Response.response):
+    response.body = templator.render("index.jinja")
 
 @server.create_endpoint("/profile")
-def index(request: CyroWebB.Request.request, response: CyroWebB.Response.response):
-    response.text = template("profile.jinja")
+def index(request: Retica.Request.request, response: Retica.Response.response):
+    response.body = templator.render("profile.jinja")
 
 @server.create_endpoint("/course")
-def index(request: CyroWebB.Request.request, response: CyroWebB.Response.response):
-    response.text = template("course.jinja")
+def index(request: Retica.Request.request, response: Retica.Response.response):
+    response.body = templator.render("course.jinja")
