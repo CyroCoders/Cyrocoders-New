@@ -44,7 +44,7 @@ for endpoint, file_name, folder in tasks:
         request = Retica.Request.request()
         request.parse(f'GET { "/" + f"{folder}/{file_name}" if folder not in [""] else f"/{file_name}" } HTTP/1.1\r\nUser-Agent: CyroWeb-Freezer\r\nAccept-Encoding: gzip, deflate\r\nConnection: Keep-Alive'.encode())
         server.endpoints['/' + endpoint][0](request, response)
-        f.write(response.text)
+        f.write(response.body)
         print(f.name)
 
 def copyFolder(_from,to):
