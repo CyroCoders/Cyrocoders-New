@@ -79,8 +79,16 @@
     margin: 0 4px 0 0;
 }
 
+.course * {
+    pointer-events: none;
+}
+
 .course .details .tags span ul li a {
     color: #1AE57F;
     text-decoration: none;
     font-size: 12px;
+}
+
+a {
+    pointer-events: auto;
 }
