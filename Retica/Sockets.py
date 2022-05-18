@@ -75,7 +75,6 @@ class HTTP_Socket(object):
         :rtype: int
         """
         return self.sock.fileno()
-        return self.sock.fileno()
 
 class HTTPS_Socket(HTTP_Socket):
     """ A HTTPS Socket
