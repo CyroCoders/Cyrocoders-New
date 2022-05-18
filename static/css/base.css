@@ -15,7 +15,7 @@
     }
 }
 :root {
-        --color-text: #fff;
+        --color-text: rgb(0, 0, 0);
         --color-background: #0A1010;
 
         --color-text-highlight: #1AE57F;
@@ -26,7 +26,10 @@
 }
 
 body {
-    background-color: var(--color-background);
+    background: url('/images/background-effect.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(100px);
     color: var(--color-text);
     font-family: 'Varela Round', sans-serif;
 }

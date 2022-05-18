@@ -3,7 +3,7 @@
 }
 
 #hero-right img {
-    height: 60vh;
+    height: 360px;
 }
 
 #hero-left {
@@ -13,7 +13,6 @@
 #hero-left #hero-text-top {
     font-size: 48px;
     font-weight: bold;
-    color: #fff;
 }
 
 #hero-left #hero-text-bottom {
