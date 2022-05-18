@@ -20,7 +20,7 @@
 
         --color-text-highlight: #1AE57F;
 
-        --card-color-background: rgb(16, 24, 24);
+        --card-color-background: #FDFFFF;
         --card-color-shadow: hsl(180, 80%, 92%);
         --card-border-radius: 25px;
 }

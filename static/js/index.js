@@ -12,17 +12,38 @@ premiumCourses.forEach((course) => {
             <img src="${course.thumbnail}" alt="${course.name}">
         </div>
         <div class="info">
-            <h3>${course.name}</h3>
+            <span>${course.name}</span>
             <p>${course.description}</p>
+            <div class="details">
+                <ul>
+                    <li class="last-edited">
+                        <ion-icon name="calendar-clear-outline"></ion-icon>
+                        <span>
+                            ${course.lastEdited}
+                        </span>
+                    </li>
+                    <li class="writer">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                        <span>
+                            ${course.writer}
+                        </span>
+                    </li>
+                    <li class="tags">
+                        <ion-icon name="pricetag-outline"></ion-icon>
+                        <span>
+                            <ul></ul>
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
     `;
-    var tagsElement = document.createElement("ul");
+    var tagsElement = courseElement.querySelector(".tags span ul");
     course.tags.forEach((tag) => {
         var tagElement = document.createElement("li");
-        tagElement.innerHTML = tag;
+        tagElement.innerHTML = "<a href='/tag/" + tag + "'>" + tag + "</a>";
         tagsElement.appendChild(tagElement);
     });
-    courseElement.appendChild(tagsElement);
     courseElement.addEventListener("click", function(event) {
         document.location.href = "/course?id=" + event.target.id;
     });
@@ -41,7 +62,7 @@ freeLessons.forEach((lesson) => {
             <img src="${lesson.thumbnail}" alt="${lesson.name}">
         </div>
         <div class="info">
-            <h3>${lesson.name}</h3>
+            <span>${lesson.name}</span>
             <p>${lesson.description}</p>
         </div>
     `;

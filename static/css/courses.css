@@ -1,8 +1,8 @@
 .course {
-    padding: 24px;
     background: var(--card-color-background);
     border-radius: var(--card-border-radius);
-    width: 408px;
+    width: 360px;
+    height: 420px;
 }
 
 .empty {
@@ -11,25 +11,76 @@
     display: block;
 }
 
-.course * {
-    pointer-events: none;
+.course .image {
+    height: 240px;
 }
 
-.course p {
-    font-size: 0.9em;
+.course .image img {
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+}
+
+.course .info {
+    height: 180px;
+}
+
+.course .info span {
+    display: block;
+    margin: 8px 16px;
+}
+
+.course .info p {
+    width: 328px;
+    height: 58px;
+    margin: 0px 16px !important;
+    display: block;
+    font-size: 12px;
     overflow-wrap: break-word;
-    margin: 0;
+    overflow: hidden;
 }
 
-.course ul {
+.course .info p::after {
+    position: absolute;
+    background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
+}
+
+.course .details {
+    margin-top: 8px;
+}
+
+.course .details span {
+    font-size: 12px;
+    margin: 8px;
+}
+
+.course .details > ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px 0px 0px 16px;
+    height: 64px;
+}
+
+.course .details li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 16px;
+    margin: 8px 0px;
+}
+
+.course .details .tags span ul {
     list-style: none;
     display: inline-flex;
     margin: 0;
     padding: 0;
 }
 
-.course ul li{
-    margin: 0 16px 0 0;
-    color: rgb(255, 72, 0);
-    pointer-events: auto;
+.course .details .tags span ul li {
+    margin: 0 4px 0 0;
+}
+
+.course .details .tags span ul li a {
+    color: #1AE57F;
+    text-decoration: none;
+    font-size: 12px;
 }
