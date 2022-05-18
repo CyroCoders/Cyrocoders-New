@@ -45,7 +45,11 @@ premiumCourses.forEach((course) => {
         tagsElement.appendChild(tagElement);
     });
     courseElement.addEventListener("click", function(event) {
-        document.location.href = "/course?id=" + event.target.id;
+        var target = event.target;
+        while(!target.classList.contains("course")) {
+            target = target.parentNode;
+        }
+        document.location.href = "/course?id=" + target.id;
     });
     document.querySelector("#premiumCoursesContent").appendChild(courseElement);
 });

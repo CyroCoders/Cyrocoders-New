@@ -73,6 +73,7 @@
     display: inline-flex;
     margin: 0;
     padding: 0;
+    pointer-events: auto;
 }
 
 .course .details .tags span ul li {
@@ -80,7 +81,6 @@
 }
 
 .course * {
-    pointer-events: none;
 }
 
 .course .details .tags span ul li a {
