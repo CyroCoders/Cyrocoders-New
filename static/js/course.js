@@ -54,8 +54,8 @@ await getDocs(collection(course,"sections")).then((querySnapshot) => {
     });
     
     var toc = document.querySelector("#tableOfContent").querySelector("ul");
-    
-    document.querySelector("#content").querySelectorAll("h2,h3").forEach(function(tag){
+    var toc_elements = document.querySelector("#content").querySelectorAll("h2,h3")
+    toc_elements.forEach(function(tag){
         var wrapper = document.createElement("a");
         var wrapped = document.createElement(tag.tagName);
         wrapped.innerHTML = tag.innerHTML;
@@ -83,17 +83,16 @@ await getDocs(collection(course,"sections")).then((querySnapshot) => {
     });
     
     document.body.addEventListener("scroll", function(){
-        var target;
-        document.querySelector("#content").querySelectorAll("h2,h3").forEach(function(item){
-            if (item.getBoundingClientRect().bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-                target = item;
-            }
+        var item_label
+        (Array.from(toc_elements)).find((item_)=>{
+            item_label = toc_elements[(Array.from(toc_elements)).indexOf(item_)].innerHTML;
+            var item = document.getElementsByName(item_label.replace(/ /g, "_"))[0];
+            return item.getBoundingClientRect().bottom <= (window.innerHeight || document.documentElement.clientHeight) && (item.getBoundingClientRect().top > 0)
         });
-        target.classList.add("active");
         document.querySelector("#tableOfContent").querySelectorAll("a li.active").forEach(function(elem){
             elem.classList.remove("active");
         });
-        document.querySelector("#tableOfContent").querySelector("a[href='#" + target.innerHTML.replace(/ /g, "_") + "'] li").classList.add("active");
+        document.querySelector("#tableOfContent").querySelector("a[href='#" + item_label.replace(/ /g, "_") + "'] li").classList.add("active");
     });
     
     hljs.highlightAll();
