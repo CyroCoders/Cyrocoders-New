@@ -121,3 +121,7 @@ iframe {
     padding: 4px 8px;
     transition: .3s;
 }
+
+.section.code .hljs {
+    border-radius: 0.5em;
+}
