@@ -40,7 +40,7 @@ body #background {
     background: url('/images/background-effect.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    backdrop-filter: blur(100px);
+    filter: blur(100px);
 }
 
 div.card {
