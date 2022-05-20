@@ -18,6 +18,8 @@
 .course .image img {
     border-top-left-radius: var(--card-border-radius);
     border-top-right-radius: var(--card-border-radius);
+    width: 360px;
+    height: 240px;
 }
 
 .course .info {
