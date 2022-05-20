@@ -26,12 +26,21 @@
 }
 
 body {
+    color: var(--color-text);
+    font-family: 'Varela Round', sans-serif;
+}
+
+body #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
     background: url('/images/background-effect.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: blur(100px);
-    color: var(--color-text);
-    font-family: 'Varela Round', sans-serif;
 }
 
 div.card {
