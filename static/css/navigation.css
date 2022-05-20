@@ -1,7 +1,7 @@
 nav#top-nav {
     position: fixed;
     background-color: #ffffff99;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(25px);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     height: 72px;
