@@ -28,6 +28,7 @@
 body {
     color: var(--color-text);
     font-family: 'Varela Round', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body #background {
