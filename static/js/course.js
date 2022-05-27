@@ -12,9 +12,11 @@ if(isNaN(section_index)){
 
 const course = doc(db, "Courses", id);
 var course_name;
+var course_description;
 
 await getDoc(course).then((course) => {
     course_name = course.data().name;
+    course_description = course.data().description;
 });
 
 await getDocs(collection(course,"sections")).then((querySnapshot) => {
@@ -37,6 +39,7 @@ await getDocs(collection(course,"sections")).then((querySnapshot) => {
     });
     var section = querySnapshot.docs[section_index].data();
     document.title = course_name + ": " + section.name;
+    document.querySelector('meta[name="description"]').setAttribute("content", course_description);
     document.querySelector("#youtube").innerHTML =  '<iframe src="https://www.youtube-nocookie.com/embed/' + section.youtube + '?autoplay=1&theme=dark&autohide=2&cc_load_policy=1&modestbranding=1&rel=0"frameborder="0"></iframe>'
     
     section.content.forEach(function(content){
