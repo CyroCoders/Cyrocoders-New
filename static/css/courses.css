@@ -1,5 +1,5 @@
 .course {
-    background: var(--card-color-background);
+    box-shadow: #a0a0a0 0px 1px 4px;
     border-radius: var(--card-border-radius);
     width: 360px;
     height: 420px;
@@ -23,7 +23,10 @@
 }
 
 .course .info {
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
     height: 180px;
+    background-color: var(--card-color-background);
 }
 
 .course .info span {
