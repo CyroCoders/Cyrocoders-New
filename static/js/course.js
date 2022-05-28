@@ -92,17 +92,39 @@ await getDocs(collection(course,"sections")).then((querySnapshot) => {
     });
     
     document.body.addEventListener("scroll", function(){
-        var item_label
-        (Array.from(toc_elements)).find((item_)=>{
-            item_label = toc_elements[(Array.from(toc_elements)).indexOf(item_)].innerHTML;
-            var item = document.getElementsByName(item_label.replace(/ /g, "_"))[0];
-            return item.getBoundingClientRect().bottom <= (window.innerHeight || document.documentElement.clientHeight) && (item.getBoundingClientRect().top > 0)
-        });
-        document.querySelector("#tableOfContent").querySelectorAll("a li.active").forEach(function(elem){
-            elem.classList.remove("active");
-        });
-        document.querySelector("#tableOfContent").querySelector("a[href='#" + item_label.replace(/ /g, "_") + "'] li").classList.add("active");
+        var item_label;
+        if (manual_scroll) {
+            (Array.from(toc_elements)).find((item_)=>{
+                item_label = toc_elements[(Array.from(toc_elements)).indexOf(item_)].innerHTML;
+                var item = document.getElementsByName(item_label.replace(/ /g, "_"))[0];
+                return item.getBoundingClientRect().bottom <= (window.innerHeight || document.documentElement.clientHeight) && (item.getBoundingClientRect().top > 0)
+            });
+            document.querySelector("#tableOfContent").querySelectorAll("a li.active").forEach(function(elem){
+                elem.classList.remove("active");
+            });
+            document.querySelector("#tableOfContent").querySelector("a[href='#" + item_label.replace(/ /g, "_") + "'] li").classList.add("active");
+            manual_scroll = false;
+        }
     });
     
+    document.querySelectorAll("#tableOfContent ul a").forEach((label) => {
+        label.addEventListener("click", function(event){
+            document.querySelector("#tableOfContent").querySelectorAll("a li.active").forEach(function(elem){
+                elem.classList.remove("active");
+            });
+            event.target.classList.add("active");
+        });
+    });
+
+    let manual_scroll = false;
+
+    document.body.addEventListener("wheel", function(){
+        manual_scroll = true;
+    });
+
+    document.body.addEventListener("touchmove", function(){
+        manual_scroll = true;
+    });
+
     hljs.highlightAll();
 });
