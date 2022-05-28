@@ -1,0 +1,74 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+            --color-text: #fff;
+            --color-background: rgb(0, 16, 16);
+
+            --card-color-background: rgb(16, 24, 24);
+            --card-color-shadow: hsl(180, 80%, 92%);
+            --card-border-radius: 25px;
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+          --color-text: rgb(0, 16, 16);
+          --color-background: #fff;
+    }
+}
+:root {
+        --color-text: rgb(0, 0, 0);
+        --color-background: #0A1010;
+
+        --color-text-highlight: #1AE57F;
+
+        --card-color-background: #FDFFFF;
+        --card-color-shadow: hsl(180, 80%, 92%);
+        --card-border-radius: 25px;
+}
+
+body {
+    color: var(--color-text);
+    font-family: 'Varela Round', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: url('/images/background-effect.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(100px);
+}
+
+div.card {
+    background-color: var(--card-color-background);
+    color: var(--color-text);
+    border-radius: var(--card-color-border-radius);
+    box-shadow: 0px 0px 10px var(--card-color-shadow);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 432px 432px;
+    grid-gap: 16px;
+    justify-items: center;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #ff8000;
+    padding-bottom: 2px;
+    text-shadow: 0px 0px 16px #ff800040;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}

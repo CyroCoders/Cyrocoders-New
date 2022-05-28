@@ -1,0 +1,61 @@
+#login, #signup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000aa;
+    z-index: 100;
+    display: none;
+}
+
+#login-form, #signup-form {
+    width: 30vw;
+    height: min-content;
+    background: var(--card-color-background);
+    display: none;
+    padding: 32px 12px;
+    border-radius: var(--card-border-radius);
+}
+
+#login-form span, #signup-form span {
+    margin: 8px auto;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#login-form span.error, #signup-form span.error {
+    padding: 8px;
+    border-radius: 8px;
+    background: #ffa4a4;
+    color: #ff2020;
+    font-size: 0.8em;
+    border: 1px solid #ff2020;
+    display: none;
+}
+
+#login-form input, #signup-form input {
+    margin: 12px 24px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+}
+
+#login-form input[type="submit"], #signup-form input[type="submit"] {
+    background: var(--color-text-highlight);
+    color: var(--color-background);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 12px 48px;
+}
+
+#login-form span.to-signup, #signup-form span.to-login {
+    color: var(--color-text-highlight);
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 0.9em;
+}

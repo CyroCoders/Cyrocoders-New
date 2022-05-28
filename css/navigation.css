@@ -1,0 +1,49 @@
+nav#top-nav {
+    position: fixed;
+    background-color: #ffffff99;
+    backdrop-filter: blur(25px);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 72px;
+    align-items: center;
+    z-index: 100;
+}
+
+nav#top-nav #brand #brand-logo img {
+    width: 48px;
+    height: 48px;
+    margin: 12px;
+}
+
+nav#top-nav #brand #brand-name span {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+nav#top-nav #account {
+    font-size: 24px;
+    padding: 10px;
+    width: 48px;
+    height: 48px;
+    margin: 12px;
+}
+
+nav .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: #00000040 1px solid;
+    box-shadow: none;
+    transition: .2s;
+}
+
+nav .button:hover {
+    transition: .2s;
+}
+
+nav .button a {
+    text-decoration: none;
+    color: var(--color-text);
+}

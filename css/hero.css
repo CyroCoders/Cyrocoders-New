@@ -1,0 +1,81 @@
+#hero-right {
+    margin-left: 24px;
+}
+
+#hero-right img {
+    height: 360px;
+}
+
+#hero-left {
+    margin-right: 24px;
+}
+
+#hero-left #hero-text-top {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#hero-left #hero-text-bottom {
+    font-size: 96px;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    color: #1AE57F;
+    display: inline-block;
+    padding-bottom:2px;
+    text-shadow: 0px 0px 16px #1ae57f40;
+    width: min-content;
+    margin-bottom: 36px;
+}
+
+#hero-left #hero-text-bottom .decor {
+    width: 0%;
+    height: 8px;
+    margin: 0 0 auto auto;
+    border-radius: 4px;
+    background-color: #1AE57F;
+    transform-origin: 100%;
+    transition:
+        width 0.3s;
+    box-shadow: 0px 0px 16px #1ae57f40;
+}
+
+#hero-left #hero-text-bottom:hover .decor {
+    margin: 0;
+    width: 100%;
+}
+
+#hero-left #hero-CTA a.button {
+    transition: .3s;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 12px 24px;
+    background-color: #ffffff10;
+    border: #ffffff40 1px solid;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+#hero-left #hero-CTA a.button:hover {
+    transition: .3s;
+    box-shadow: inset 8px 8px 8px #ffffff40,
+                inset -8px -8px 8px #00000060,
+                0px 0px 16px #1a1a1a40;
+}
+
+#hero-left #hero-CTA a.button:hover:active {
+    transition: .1s;
+    box-shadow: inset -4px -4px 8px #00000060,
+                inset 4px 4px 8px #ffffff40;
+}
+
+#hero-left #hero-CTA a.button:nth-of-type(1) {
+    color: #1AE57F;
+    border: 2px solid #1AE57F;
+    margin-right: 12px;
+}
+
+#hero-left #hero-CTA a.button:nth-of-type(2) {
+    color: #19e6e6;
+    border: 2px solid #19e6e6;
+    margin-left: 12px;
+}

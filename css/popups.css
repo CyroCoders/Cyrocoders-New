@@ -1,0 +1,18 @@
+#popups {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+#popups > *:not(.active) {
+    display: none !important;
+}
+
+#popups > *.active {
+    display: block;
+    pointer-events: auto;
+}
